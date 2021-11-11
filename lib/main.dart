@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'widgets/allTabControl.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     debugShowCheckedModeBanner: false,
     initialRoute: '/first',
       routes: {
-      '/first':(context)=>Login(),
+      '/first':(context)=>AllTabControll(),
         
        },
     );
@@ -169,7 +170,7 @@ class _Login extends State<Login>{
                        ),
                        shape: BoxShape.circle,
                      ),
-                   )
+                   ),
                  ],
                ),
              ),
