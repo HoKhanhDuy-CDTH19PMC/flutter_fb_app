@@ -44,7 +44,7 @@ class AllTabControll extends StatelessWidget {
                  ),
                ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 0,  10,0),
+                  margin: EdgeInsets.fromLTRB(0, 0,  13,0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
@@ -52,7 +52,6 @@ class AllTabControll extends StatelessWidget {
                         margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
                         child:  Icon(FontAwesomeIcons.search,color: Colors.black,),
                       ),
-
 
                       Icon(FontAwesomeIcons.facebookMessenger,color: Colors.black,),
                     ],

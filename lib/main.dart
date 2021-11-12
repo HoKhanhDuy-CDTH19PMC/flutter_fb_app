@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     debugShowCheckedModeBanner: false,
     initialRoute: '/first',
       routes: {
-      '/first':(context)=>AllTabControll(),
+      '/first':(context)=>Login(),
         
        },
     );
@@ -30,8 +30,24 @@ class Login extends StatefulWidget{
   
 }
 class _Login extends State<Login>{
+  TextEditingController valueEmail =  TextEditingController();
+  TextEditingController valuePassword = TextEditingController();
   var _formKey = GlobalKey<FormState>();
 
+ void _submit() {
+    final isValid = _formKey.currentState!.validate();
+
+    if (!isValid) {
+      return;
+    }
+ 
+    if(valueEmail.text==valuePassword.text){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>AllTabControll()));
+     
+
+    }
+    _formKey.currentState!.save();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +82,7 @@ class _Login extends State<Login>{
              Container(
                padding: EdgeInsets.all(20),
                margin: EdgeInsets.fromLTRB(0,30,0,0  ),
-               child: TextFormField(controller: null, obscureText: false, decoration: InputDecoration(
+               child: TextFormField(controller: valueEmail, obscureText: false, decoration: InputDecoration(
                  contentPadding: EdgeInsets.fromLTRB(10, 15, 0, 0),
 
                  hintText: "Số điện thoại hoặc email",
@@ -95,7 +111,7 @@ class _Login extends State<Login>{
              Container(
                padding: EdgeInsets.all(20),
 
-               child: TextFormField( controller:null, obscureText: true, decoration: InputDecoration(
+               child: TextFormField( controller: valuePassword, obscureText: true, decoration: InputDecoration(
                  contentPadding: EdgeInsets.fromLTRB(10, 15, 0, 0),
                  hintText: "Password",
                  hintStyle: TextStyle(
@@ -126,7 +142,7 @@ class _Login extends State<Login>{
                      padding: MaterialStateProperty.all(EdgeInsets.fromLTRB(0,15,0,15)),
                    ),
                    child: const Text('Đăng nhập',style: TextStyle(color: Colors.white,fontSize: 18),),
-                   onPressed: () => null
+                   onPressed: () => _submit()
                ),
              ),
              Container(

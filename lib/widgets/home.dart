@@ -82,12 +82,13 @@ class Home extends StatelessWidget {
                 ]
             ),
             Container(
-              padding: EdgeInsets.all(7),
+              padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
 
               child: Column(
 
                 children: <Widget>[
                   Row(
+
                     children: [
                       Container(
                         margin: EdgeInsets.fromLTRB(10, 10  , 10, 10),
@@ -96,7 +97,7 @@ class Home extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                'images/avt_thay.jpg'),
+                                'images/avt_tuan.jpg'),
                             fit: BoxFit.fill,
                           ),
                           shape: BoxShape.circle,
@@ -111,10 +112,9 @@ class Home extends StatelessWidget {
                             children: <Widget>[
                              Container(
                                margin: EdgeInsets.fromLTRB(0, 2, 3, 0),
-                               child:  Text("Tiến Lữ",style: TextStyle(fontSize: 18),),
+                               child:  Text("Nguyễn Quốc Tuấn",style: TextStyle(fontSize: 18),),
                              ),
                               Icon(FontAwesomeIcons.solidCheckCircle,color: Colors.blue,size: 14,),
-
                             ],
                           ),
                              Container(
@@ -122,7 +122,7 @@ class Home extends StatelessWidget {
                                child: Row(
                                  mainAxisAlignment: MainAxisAlignment.start,
                                  children: [
-                                   Text("2 phút " ,style: TextStyle(color: Colors.black38,),),
+                                   Text("45 phút " ,style: TextStyle(color: Colors.black38,),),
                                    Icon(FontAwesomeIcons.globeEurope,color: Colors.grey,size: 13,)
                                  ],
                                ),
@@ -130,10 +130,121 @@ class Home extends StatelessWidget {
                         ],
                       ),
                     ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+
+                          margin: EdgeInsets.fromLTRB(10, 0  , 10, 10),
+                        child:Text("Cuộc gặp sau dịch của những người bạn!",style: TextStyle(fontSize: 17),),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 250,
+                        width: 411,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'images/avt_ae.jpg'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                   Container(
+                     padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                     child : Row(
+                     children: [
+
+                     Icon(FontAwesomeIcons.thumbsUp,color: Colors.blue,size: 17,),
+                      //  Icon(FontAwesomeIcons.laugh,color: Colors.orangeAccent,size: 18,),
+                      Icon(FontAwesomeIcons.solidHeart,color: Colors.red,size: 17,),
+                       Container(
+                         margin: EdgeInsets.fromLTRB(5, 2, 0, 0),
+                         child:Text("1.212",style: TextStyle(fontSize: 17,color: Colors.black45),),
+                       )
+                        ]
+
+                     ),
+                   ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(5, 2, 5, 0),
+                        child:    Row(
+
+                          children: [
+                            Text("243 bình luận  ",style: TextStyle(fontSize: 16,color: Colors.black45),),
+                            Text("120 lượt chia sẻ",style: TextStyle(fontSize: 16,color: Colors.black45),),
+                          ],
+                        ),
+                      ),
+
+                    ],
+                  ),
+                  Row(
+                      children: <Widget>[
+                        Expanded(
+                            child: Divider(  color: Colors.black38,
+                             )
+                        ),
+                      ]
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                            child:Icon(FontAwesomeIcons.thumbsUp,color: Colors.blue,size: 17,),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 3, 0, 0),
+                            child:  Text("Thích",style: TextStyle(fontSize: 16,color: Colors.black45),),
+                          )
+
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                            child:Icon(FontAwesomeIcons.comment,color: Colors.blue,size: 17,),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 3, 0, 0),
+                            child:  Text("Bình luận",style: TextStyle(fontSize: 16,color: Colors.black45),),
+                          )
+
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                            child:Icon(FontAwesomeIcons.shareAlt,color: Colors.blue,size: 17,),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 3, 0, 0),
+                            child:  Text("Chia sẻ",style: TextStyle(fontSize: 16,color: Colors.black45),),
+                          )
+
+                        ],
+                      ),
+
+                    ],
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       );
