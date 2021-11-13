@@ -15,20 +15,20 @@ class _Profile_Screen extends State<Profile_Screen> {
         Stack(
           children: <Widget>[
             Container(
-              height: 300,
-              width: 500,
+              height: 50,
+              width: 50,
               color: Colors.grey,
             ),
             Container(
-                height: 200,
-                width: 500,
+                height: 50,
+                width: 50,
                 child: Image.asset(
                   "images/avt2.jpg",
                   fit: BoxFit.cover,
                 )),
             Positioned(
-              top: 150,
-              left: 350,
+              top: 10,
+              left: 30,
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(5)),
                 child: Container(
@@ -40,8 +40,8 @@ class _Profile_Screen extends State<Profile_Screen> {
               ),
             ),
             Positioned(
-              top: 100,
-              left: 120,
+              top: 10,
+              left: 10,
               child: CircleAvatar(
                 radius: 80,
                 backgroundColor: Colors.white,
@@ -52,8 +52,8 @@ class _Profile_Screen extends State<Profile_Screen> {
               ),
             ),
             Positioned(
-              top: 210,
-              left: 240,
+              top: 10,
+              left: 10,
               child: CircleAvatar(
                 radius: 22,
                 backgroundColor: Colors.grey[300],

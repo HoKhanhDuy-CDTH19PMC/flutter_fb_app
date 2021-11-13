@@ -62,6 +62,7 @@ flutter:
   assets:
   - images/login_login.png
   - images/logo_login.jpg
+  - images/avt_ae.jpg
   - images/avt_tuan.jpg
   - images/avt_hao.jpg
   - images/avt_duy.jpg
@@ -71,6 +72,8 @@ flutter:
   - images/avt2.jpg
   - images/avt4.jpeg
   - images/anh.png
+  - images/mc.jpg
+  
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

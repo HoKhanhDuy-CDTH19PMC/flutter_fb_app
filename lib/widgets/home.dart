@@ -94,6 +94,7 @@ class Home extends StatelessWidget {
                         margin: EdgeInsets.fromLTRB(10, 10  , 10, 10),
                         height: 50,
                         width: 50,
+                        
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
@@ -141,22 +142,11 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 250,
-                        width: 411,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                'images/avt_ae.jpg'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+             Container(
+              height: 230,
+               child:Image.asset('images/avt_ae.jpg',width: double.infinity, fit: BoxFit.cover,),
+             ),
+
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
