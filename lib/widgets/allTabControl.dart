@@ -1,8 +1,12 @@
+import 'package:facebook_app/widgets/notification.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'home.dart';
 import 'addfriend.dart';
+import 'notification.dart';
+import 'menu.dart';
+import 'profile.dart';
 
 void main() {
   runApp(const AllTabControll());
@@ -81,9 +85,9 @@ class AllTabControll extends StatelessWidget {
           body: TabBarView(
             children: <Widget>[
               Home(),
-              tranghai(),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              AddFriend_Screen(),
+              Notification_Screen(),
+              Menu_Screen()
             ],
           ),
         ),
